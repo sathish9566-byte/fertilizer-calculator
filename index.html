@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fertilizer Recommendation Calculator</title>
-    <link rel="manifest" href="manifest.json">
     <style>
         body { font-family: sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9; }
         h1 { text-align: center; color: #2c5e2e; }
@@ -27,212 +26,79 @@
             <label for="crop">1. Select Crop:</label>
             <select id="crop">
                 <optgroup label="Cereals">
-                    <option value="rice">Rice</option>
-                    <option value="wheat">Wheat</option>
-                    <option value="maize">Maize (Corn)</option>
-                    <option value="barley">Barley</option>
-                    <option value="oats">Oats</option>
-                    <option value="sorghum">Sorghum</option>
-                    <option value="millet">Millet</option>
+                    <option value="rice">Rice</option> <option value="wheat">Wheat</option> <option value="maize">Maize (Corn)</option> <option value="barley">Barley</option> <option value="oats">Oats</option> <option value="sorghum">Sorghum</option> <option value="millet">Millet</option>
                 </optgroup>
                 <optgroup label="Pulses (Legumes)">
-                    <option value="chickpeas">Chickpeas</option>
-                    <option value="lentils">Lentils</option>
-                    <option value="peas">Peas</option>
-                    <option value="beans">Beans (Kidney)</option>
-                    <option value="soybeans">Soybeans</option>
-                    <option value="pigeon_peas">Pigeon Peas</option>
+                    <option value="chickpeas">Chickpeas</option> <option value="lentils">Lentils</option> <option value="peas">Peas</option> <option value="beans">Beans (Kidney)</option> <option value="soybeans">Soybeans</option> <option value="pigeon_peas">Pigeon Peas</option>
                 </optgroup>
                 <optgroup label="Oilseeds">
-                    <option value="rapeseed_mustard">Rapeseed / Mustard</option>
-                    <option value="sunflower">Sunflower</option>
-                    <option value="groundnut">Groundnut (Peanut)</option>
-                    <option value="sesame">Sesame</option>
-                    <option value="castor_bean">Castor Bean</option>
+                    <option value="rapeseed_mustard">Rapeseed / Mustard</option> <option value="sunflower">Sunflower</option> <option value="groundnut">Groundnut (Peanut)</option> <option value="sesame">Sesame</option> <option value="castor_bean">Castor Bean</option>
                 </optgroup>
                 <optgroup label="Fiber Crops">
-                    <option value="cotton">Cotton</option>
-                    <option value="jute">Jute</option>
+                    <option value="cotton">Cotton</option> <option value="jute">Jute</option>
                 </optgroup>
                 <optgroup label="Sugar Crops">
-                    <option value="sugarcane">Sugarcane</option>
-                    <option value="sugar_beet">Sugar Beet</option>
+                    <option value="sugarcane">Sugarcane</option> <option value="sugar_beet">Sugar Beet</option>
                 </optgroup>
                 <optgroup label="Vegetables - Root">
-                    <option value="carrot">Carrot</option>
-                    <option value="potato">Potato</option>
-                    <option value="sweet_potato">Sweet Potato</option>
-                    <option value="radish">Radish</option>
-                    <option value="beetroot">Beetroot</option>
+                    <option value="carrot">Carrot</option> <option value="potato">Potato</option> <option value="sweet_potato">Sweet Potato</option> <option value="radish">Radish</option> <option value="beetroot">Beetroot</option>
                 </optgroup>
                 <optgroup label="Vegetables - Bulb & Stem">
-                    <option value="onion">Onion</option>
-                    <option value="garlic">Garlic</option>
+                    <option value="onion">Onion</option> <option value="garlic">Garlic</option>
                 </optgroup>
                  <optgroup label="Vegetables - Leafy & Cole">
-                    <option value="spinach">Spinach</option>
-                    <option value="lettuce">Lettuce</option>
-                    <option value="cabbage">Cabbage</option>
-                    <option value="cauliflower">Cauliflower</option>
-                    <option value="broccoli">Broccoli</option>
-                    <option value="fenugreek">Fenugreek (Methi)</option>
+                    <option value="spinach">Spinach</option> <option value="lettuce">Lettuce</option> <option value="cabbage">Cabbage</option> <option value="cauliflower">Cauliflower</option> <option value="broccoli">Broccoli</option> <option value="fenugreek">Fenugreek (Methi)</option>
                 </optgroup>
                 <optgroup label="Vegetables - Fruiting">
-                    <option value="tomato">Tomato</option>
-                    <option value="brinjal">Brinjal (Eggplant)</option>
-                    <option value="bell_pepper">Bell Pepper (Capsicum)</option>
-                    <option value="chilli">Chilli</option>
-                    <option value="okra">Okra (Lady's Finger)</option>
+                    <option value="tomato">Tomato</option> <option value="brinjal">Brinjal (Eggplant)</option> <option value="bell_pepper">Bell Pepper (Capsicum)</option> <option value="chilli">Chilli</option> <option value="okra">Okra (Lady's Finger)</option>
                 </optgroup>
                 <optgroup label="Vegetables - Gourds">
-                    <option value="cucumber">Cucumber</option>
-                    <option value="pumpkin">Pumpkin</option>
-                    <option value="bottle_gourd">Bottle Gourd</option>
-                    <option value="bitter_gourd">Bitter Gourd</option>
-                    <option value="watermelon">Watermelon</option>
-                    <option value="muskmelon">Muskmelon</option>
+                    <option value="cucumber">Cucumber</option> <option value="pumpkin">Pumpkin</option> <option value="bottle_gourd">Bottle Gourd</option> <option value="bitter_gourd">Bitter Gourd</option> <option value="watermelon">Watermelon</option> <option value="muskmelon">Muskmelon</option>
                 </optgroup>
             </select>
         </div>
 
         <div class="input-group">
-            <label for="nitrogen">2. Soil Nitrogen (N) in kg/ha:</label>
-            <input type="number" id="nitrogen" placeholder="e.g., 25">
+            <label for="nitrogen">2. Soil Nitrogen (N) in kg/ha:</label> <input type="number" id="nitrogen" placeholder="e.g., 25">
         </div>
         <div class="input-group">
-            <label for="phosphorus">3. Soil Phosphorus (P) in kg/ha:</label>
-            <input type="number" id="phosphorus" placeholder="e.g., 15">
+            <label for="phosphorus">3. Soil Phosphorus (P) in kg/ha:</label> <input type="number" id="phosphorus" placeholder="e.g., 15">
         </div>
         <div class="input-group">
-            <label for="potassium">4. Soil Potassium (K) in kg/ha:</label>
-            <input type="number" id="potassium" placeholder="e.g., 50">
+            <label for="potassium">4. Soil Potassium (K) in kg/ha:</label> <input type="number" id="potassium" placeholder="e.g., 50">
         </div>
 
         <button onclick="calculateFertilizer()">Calculate</button>
 
-        <div id="result">
-            <p>Your fertilizer recommendations will appear here.</p>
-            <p class="disclaimer">Note: These are general recommendations. Actual amounts may vary based on soil type, variety, and local conditions.</p>
-        </div>
+        <div id="result"><p>Your fertilizer recommendations will appear here.</p></div>
     </div>
 
     <script>
         function calculateFertilizer() {
-            // --- Part 1: Storing the Data (UPDATED with all new crops) ---
             const cropRequirements = {
-                // Cereals
-                rice:      { n: 120, p: 60, k: 60 },
-                wheat:     { n: 150, p: 75, k: 60 },
-                maize:     { n: 180, p: 90, k: 90 },
-                barley:    { n: 80,  p: 40, k: 30 },
-                oats:      { n: 80,  p: 40, k: 40 },
-                sorghum:   { n: 100, p: 50, k: 40 },
-                millet:    { n: 80,  p: 40, k: 40 },
-                // Pulses
-                chickpeas:   { n: 20, p: 60, k: 20 },
-                lentils:     { n: 20, p: 50, k: 20 },
-                peas:        { n: 25, p: 60, k: 40 },
-                beans:       { n: 40, p: 60, k: 50 },
-                soybeans:    { n: 30, p: 80, k: 40 },
-                pigeon_peas: { n: 20, p: 50, k: 30 },
-                // Oilseeds
-                rapeseed_mustard: { n: 120, p: 60, k: 60 },
-                sunflower:   { n: 60,  p: 90, k: 60 },
-                groundnut:   { n: 25,  p: 50, k: 75 },
-                sesame:      { n: 50,  p: 25, k: 25 },
-                castor_bean: { n: 80,  p: 40, k: 40 },
-                // Fiber Crops
-                cotton:      { n: 80,  p: 40, k: 40 },
-                jute:        { n: 60,  p: 30, k: 30 },
-                // Sugar Crops
-                sugarcane:   { n: 250, p: 75, k: 75 },
-                sugar_beet:  { n: 120, p: 60, k: 150 },
-                // Vegetables
-                carrot:      { n: 80,  p: 50, k: 100 },
-                potato:      { n: 150, p: 80, k: 120 },
-                sweet_potato:{ n: 40,  p: 60, k: 120 },
-                radish:      { n: 60,  p: 40, k: 40 },
-                beetroot:    { n: 120, p: 60, k: 100 },
-                onion:       { n: 120, p: 60, k: 80 },
-                garlic:      { n: 100, p: 50, k: 50 },
-                spinach:     { n: 90,  p: 50, k: 70 },
-                lettuce:     { n: 80,  p: 40, k: 100 },
-                cabbage:     { n: 180, p: 80, k: 120 },
-                cauliflower: { n: 150, p: 80, k: 80 },
-                broccoli:    { n: 140, p: 70, k: 100 },
-                fenugreek:   { n: 20,  p: 40, k: 20 },
-                tomato:      { n: 120, p: 80, k: 120 },
-                brinjal:     { n: 100, p: 60, k: 60 },
-                bell_pepper: { n: 150, p: 80, k: 100 },
-                chilli:      { n: 100, p: 50, k: 50 },
-                okra:        { n: 100, p: 50, k: 50 },
-                cucumber:    { n: 80,  p: 50, k: 100 },
-                pumpkin:     { n: 100, p: 60, k: 120 },
-                bottle_gourd:{ n: 70,  p: 40, k: 40 },
-                bitter_gourd:{ n: 80,  p: 50, k: 50 },
-                watermelon:  { n: 100, p: 60, k: 80 },
-                muskmelon:   { n: 120, p: 60, k: 80 }
+                rice:{n:120,p:60,k:60},wheat:{n:150,p:75,k:60},maize:{n:180,p:90,k:90},barley:{n:80,p:40,k:30},oats:{n:80,p:40,k:40},sorghum:{n:100,p:50,k:40},millet:{n:80,p:40,k:40},chickpeas:{n:20,p:60,k:20},lentils:{n:20,p:50,k:20},peas:{n:25,p:60,k:40},beans:{n:40,p:60,k:50},soybeans:{n:30,p:80,k:40},pigeon_peas:{n:20,p:50,k:30},rapeseed_mustard:{n:120,p:60,k:60},sunflower:{n:60,p:90,k:60},groundnut:{n:25,p:50,k:75},sesame:{n:50,p:25,k:25},castor_bean:{n:80,p:40,k:40},cotton:{n:80,p:40,k:40},jute:{n:60,p:30,k:30},sugarcane:{n:250,p:75,k:75},sugar_beet:{n:120,p:60,k:150},carrot:{n:80,p:50,k:100},potato:{n:150,p:80,k:120},sweet_potato:{n:40,p:60,k:120},radish:{n:60,p:40,k:40},beetroot:{n:120,p:60,k:100},onion:{n:120,p:60,k:80},garlic:{n:100,p:50,k:50},spinach:{n:90,p:50,k:70},lettuce:{n:80,p:40,k:100},cabbage:{n:180,p:80,k:120},cauliflower:{n:150,p:80,k:80},broccoli:{n:140,p:70,k:100},fenugreek:{n:20,p:40,k:20},tomato:{n:120,p:80,k:120},brinjal:{n:100,p:60,k:60},bell_pepper:{n:150,p:80,k:100},chilli:{n:100,p:50,k:50},okra:{n:100,p:50,k:50},cucumber:{n:80,p:50,k:100},pumpkin:{n:100,p:60,k:120},bottle_gourd:{n:70,p:40,k:40},bitter_gourd:{n:80,p:50,k:50},watermelon:{n:100,p:60,k:80},muskmelon:{n:120,p:60,k:80}
             };
-
-            const fertilizers = {
-                urea: { n: 0.46, p: 0, k: 0 },
-                dap:  { n: 0.18, p: 0.46, k: 0 },
-                mop:  { n: 0, p: 0, k: 0.60 }
-            };
-
-            // --- Parts 2, 3, 4, 5 (No change) ---
-            const selectedCrop = document.getElementById('crop').value;
-            const soilN = parseFloat(document.getElementById('nitrogen').value);
-            const soilP = parseFloat(document.getElementById('phosphorus').value);
-            const soilK = parseFloat(document.getElementById('potassium').value);
-
-            if (isNaN(soilN) || isNaN(soilP) || isNaN(soilK)) {
-                document.getElementById('result').innerHTML = `<p class="error">Please enter valid numbers in all soil test fields.</p>`;
-                return;
-            }
-
-            const targetN = cropRequirements[selectedCrop].n;
-            const targetP = cropRequirements[selectedcrop].p;
-            const targetK = cropRequirements[selectedCrop].k;
-
-            let requiredN = Math.max(0, targetN - soilN);
-            let requiredP = Math.max(0, targetP - soilP);
-            let requiredK = Math.max(0, targetK - soilK);
-
-            const mopAmount = requiredK / fertilizers.mop.k;
-            const dapAmount = requiredP / fertilizers.dap.p;
-            const nitrogenSuppliedByDAP = dapAmount * fertilizers.dap.n;
-            let nitrogenStillNeeded = requiredN - nitrogenSuppliedByDAP;
-            let ureaAmount = 0;
-            if (nitrogenStillNeeded > 0) {
-                ureaAmount = nitrogenStillNeeded / fertilizers.urea.n;
-            }
-
-            const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = `
-                <h3>Recommendation for ${selectedCrop.replace(/_/g, ' ').toUpperCase()}</h3>
-                <p>Based on your soil test values, you need to apply:</p>
-                <ul>
-                    <li><b>Urea:</b> ${ureaAmount.toFixed(2)} kg/ha</li>
-                    <li><b>DAP:</b> ${dapAmount.toFixed(2)} kg/ha</li>
-                    <li><b>MOP:</b> ${mopAmount.toFixed(2)} kg/ha</li>
-                </ul>
-                <p class="disclaimer">Note: These are general recommendations. Actual amounts may vary based on soil type, variety, and local conditions.</p>
-            `;
+            const fertilizers = { urea:{n:0.46,p:0,k:0},dap:{n:0.18,p:0.46,k:0},mop:{n:0,p:0,k:0.60} };
+            const selectedCrop=document.getElementById('crop').value;
+            const soilN=parseFloat(document.getElementById('nitrogen').value);
+            const soilP=parseFloat(document.getElementById('phosphorus').value);
+            const soilK=parseFloat(document.getElementById('potassium').value);
+            if(isNaN(soilN)||isNaN(soilP)||isNaN(soilK)){document.getElementById('result').innerHTML=`<p class="error">Please enter valid numbers in all soil test fields.</p>`;return}
+            const targetN=cropRequirements[selectedCrop].n;
+            const targetP=cropRequirements[selectedCrop].p;
+            const targetK=cropRequirements[selectedCrop].k;
+            let requiredN=Math.max(0,targetN-soilN);
+            let requiredP=Math.max(0,targetP-soilP);
+            let requiredK=Math.max(0,targetK-soilK);
+            const mopAmount=requiredK/fertilizers.mop.k;
+            const dapAmount=requiredP/fertilizers.dap.p;
+            const nitrogenSuppliedByDAP=dapAmount*fertilizers.dap.n;
+            let nitrogenStillNeeded=requiredN-nitrogenSuppliedByDAP;
+            let ureaAmount=0;
+            if(nitrogenStillNeeded>0){ureaAmount=nitrogenStillNeeded/fertilizers.urea.n}
+            const resultDiv=document.getElementById('result');
+            resultDiv.innerHTML=`<h3>Recommendation for ${selectedCrop.replace(/_/g,' ').toUpperCase()}</h3><p>Based on your soil test values, you need to apply:</p><ul><li><b>Urea:</b> ${ureaAmount.toFixed(2)} kg/ha</li><li><b>DAP:</b> ${dapAmount.toFixed(2)} kg/ha</li><li><b>MOP:</b> ${mopAmount.toFixed(2)} kg/ha</li></ul><p class="disclaimer">Note: These are general recommendations. Actual amounts may vary based on soil type, variety, and local conditions.</p>`;
         }
     </script>
-    
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js').then(registration => {
-                    console.log('ServiceWorker registration successful');
-                }).catch(err => {
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-            });
-        }
-    </script>
-
-</body>
+    </body>
 </html>
